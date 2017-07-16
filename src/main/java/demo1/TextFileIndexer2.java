@@ -25,10 +25,10 @@ import java.util.Date;
  */
 public   class  TextFileIndexer2  {
     public   static   void  main(String[] args)  throws  Exception  {
-         /**/ /* 被索引文件物理位置 */
+         /**/ /* ?????????????锟斤拷?? */
         File fileDir  =   new  File( "d://develop" );
 //         File file = new File("d://index");
-//索引文件存放位置
+//??????????锟斤拷??
         Directory indexDir  =   NIOFSDirectory.open(FileSystems.getDefault().getPath("d://index"));
         Analyzer luceneAnalyzer  =   new StandardAnalyzer();  //????????????????
         IndexWriterConfig indexWriterConfig = new IndexWriterConfig(luceneAnalyzer);
@@ -41,7 +41,7 @@ public   class  TextFileIndexer2  {
             if  (textFiles[i].isFile()
                     &&  textFiles[i].getName().endsWith( ".txt" ))  {
                 System.out.println( " File "   +  textFiles[i].getCanonicalPath()
-                        +   "文件路径. " );
+                        +   "???锟斤拷??. " );
                 String temp  =  FileReaderAll(textFiles[i].getCanonicalPath(),"GBK" );
                 System.out.println(temp);
                 Document document  =   new Document();
@@ -58,9 +58,9 @@ public   class  TextFileIndexer2  {
 
 
         long  endTime  =   new  Date().getTime();
-        System.out.println( "开始时间-结束时间 "
+        System.out.println( "??????-??????? "
                         +  (endTime  -  startTime)
-                        +   "  毫秒 "
+                        +   "  ???? "
                         +  fileDir.getPath());
     }
 
