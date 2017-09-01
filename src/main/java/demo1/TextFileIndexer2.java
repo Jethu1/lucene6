@@ -78,3 +78,14 @@ public   class  TextFileIndexer2  {
         return  temp;
     }
 }
+/*
+
+    //        ArrayList<Pojo> list= test.test(file1);
+    ArrayList<ArrayList<Pojo>> arrayLists = new ArrayList<ArrayList<Pojo>>(20);
+        for (int i = 0; i < xmlFiles.length; i++) {
+//            System.out.println(xmlFiles[i].getName());
+        if (xmlFiles[i].getName().endsWith(".xml") && !xmlFiles[i].getName().equals("a.xml") && !xmlFiles[i].getName().equals("practice.xml")) {
+//                arrayLists.add(test.test(xmlFiles[i].getName()));
+        }
+        }
+        System.out.println(arrayLists);*/

@@ -41,8 +41,8 @@ public class Searcher {
     }
 
     public static void main(String[] args) throws IOException, ParseException {
-        String indexDir = "E:/index";
-        String query = "netty";
+        String indexDir = "index";
+        String query = "程";
         search(indexDir,query);
     }
 

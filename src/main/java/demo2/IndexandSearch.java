@@ -30,7 +30,6 @@ public class IndexandSearch {
         return doc;
     }
 
-
     /**
      * lucene简单实例 索引 查询 经济,分词器：标准分词器
      */

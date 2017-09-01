@@ -58,10 +58,8 @@ writer=new IndexWriter(dir,config);
     //这个方法是遍历文件夹下所有文件并选择符合条件文件写入索引的方法，返回写入的文档总数
     public int index(String dataDir,FileFilter filter) throws IOException {
         File[] files = new File(dataDir).listFiles();
-        for (File file:files
-             ) {
-            if(!file.isDirectory()&&!file.isHidden()&&file.exists()
-                    &&file.canRead()&&(filter==null)||filter.accept(file))
+        for (File file:files) {
+            if(!file.isDirectory()&&!file.isHidden()&&file.exists()&&file.canRead()&&(filter==null)||filter.accept(file))
                 indexFile(file);
             else
                 System.out.println("can not find files or other problems");
@@ -86,8 +84,8 @@ writer=new IndexWriter(dir,config);
     }
 
     public static void main(String[] args) throws IOException {
-        String indexDir = "E:/index";// the dirctory that stores index.
-        String dataDir = "E:/data";//the dirctory that stores files to be indexed.
+        String indexDir = "index";// the dirctory that stores index.
+        String dataDir = "data";//the dirctory that stores files to be indexed.
 
         long start = System.currentTimeMillis();
         Indexer indexer = new Indexer(indexDir);
