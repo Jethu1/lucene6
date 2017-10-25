@@ -22,7 +22,7 @@ public class IndexMergeToOne {
     @Test
     public void index() throws IOException {
         //create a indexWriter"
-        Directory directory = FSDirectory.open(Paths.get("50index"));
+        Directory directory = FSDirectory.open(Paths.get("10index"));
         Analyzer timeAnalyzer = new StandardAnalyzer();
         IndexWriterConfig writerConfig = new IndexWriterConfig(timeAnalyzer);
         writerConfig.setOpenMode(IndexWriterConfig.OpenMode.CREATE_OR_APPEND);

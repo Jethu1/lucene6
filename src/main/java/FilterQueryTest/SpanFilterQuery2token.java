@@ -1,4 +1,4 @@
-package Lucene6IndexAbility;
+package FilterQueryTest;
 
 import org.apache.lucene.index.Term;
 import org.apache.lucene.search.Query;
@@ -12,7 +12,7 @@ import org.apache.lucene.search.spans.SpanTermQuery;
  * @Date: Created in 17:10  2017/8/31
  * @Modified By:
  */
-public class SpanFilterQuery {
+public class SpanFilterQuery2token {
 
     private Query query;              //最终需要的查询对象
     private SpanQuery[] first;            //前词(分词之后的数组)
@@ -29,7 +29,7 @@ public class SpanFilterQuery {
      *@param: slop 词间距
      *@param: inOrder 为true则是after查询，false为 near查询
      */
-    public SpanFilterQuery(String field, String[] str1, String[] str2, int slop, boolean inOrder) {
+    public SpanFilterQuery2token(String field, String[] str1, String[] str2, int slop, boolean inOrder) {
         first = new SpanQuery[str1.length];
         second = new SpanQuery[str2.length];
         for (int i = 0; i < str1.length; i++) {
@@ -50,7 +50,7 @@ public class SpanFilterQuery {
      *@Date: 21:48  2017/8/31
      *@param:  str1 长词
      */
-    public SpanFilterQuery(String field, String[] str1) {
+    public SpanFilterQuery2token(String field, String[] str1) {
         first = new SpanQuery[str1.length];
         for (int i = 0; i < str1.length; i++) {
             first[i] = new SpanTermQuery(new Term(field,str1[i]));

@@ -1,4 +1,4 @@
-package Lucene6IndexAbility;
+package collector;
 
 import org.apache.lucene.analysis.standard.StandardAnalyzer;
 import org.apache.lucene.document.Document;
@@ -15,7 +15,7 @@ import java.nio.file.Paths;
 /**
  * Created by jet on 2017/7/16.
  */
-public class Indexer {
+public class groupIndexer {
 
     private static IndexWriter writer;//这个类用来写入索引
     static  String[] fileName;
@@ -30,7 +30,7 @@ public class Indexer {
     }
 
     //构造方法，用来传入索引存放路径
-    public Indexer(String indexDir) throws IOException {
+    public groupIndexer(String indexDir) throws IOException {
         Directory dir = FSDirectory.open(Paths.get(indexDir));
 //        Directory dir = new  RAMDirectory();
         IndexWriterConfig config = new IndexWriterConfig(new StandardAnalyzer());
@@ -80,7 +80,7 @@ public class Indexer {
     public static void main(String[] args) throws IOException {
         String indexDir = "10index";// the dirctory that stores index.
         String dataDir = "data";//the dirctory that stores files to be indexed.
-        Indexer indexer = new Indexer(indexDir);
+        groupIndexer indexer = new groupIndexer(indexDir);
         indexer.index(dataDir,new TextFilesFilter());
         long start = System.currentTimeMillis();
         for (int k = 0; k < 1000; k++) {

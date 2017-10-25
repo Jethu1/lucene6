@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: com.pachira.shared:shared-utility:4.0-SNAPSHOT">
+    <CLASSES>
+      <root url="jar://D:/develop/mave/localRepository/com/pachira/shared/shared-utility/4.0-SNAPSHOT/shared-utility-4.0-SNAPSHOT.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://D:/develop/mave/localRepository/com/pachira/shared/shared-utility/4.0-SNAPSHOT/shared-utility-4.0-SNAPSHOT-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://D:/develop/mave/localRepository/com/pachira/shared/shared-utility/4.0-SNAPSHOT/shared-utility-4.0-SNAPSHOT-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
